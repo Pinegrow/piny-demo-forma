@@ -36,9 +36,10 @@ Free is enough for the first edits below.
 
 Keep piny.project.json, .piny/components.json, .piny/internal.json and the
 static previews: they describe the pages and component library.
+Keep .piny/metadata-reviews.json with them: it records the reviewed demo baseline.
+Piny reports when later source, descriptions or preview inputs need review.
 If I later change component examples, run npm run previews to refresh them.
-Do not commit .piny/local.json, .piny/cache, local review records, node_modules
-or dist.
+Do not commit .piny/local.json, .piny/cache, node_modules or dist.
 
 Report the editor URL and any setup problem, without exposing secrets.
 ```
