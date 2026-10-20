@@ -24,7 +24,7 @@
     "react-dom": "19.3.0"
   },
   "devDependencies": {
-    "@pinegrow/piny": "1.0.0-beta.1",
+    "@pinegrow/piny": "latest",
     "@tailwindcss/vite": "4.3.3",
     "@types/node": "22.20.2",
     "@types/react": "19.3.0",

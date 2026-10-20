@@ -13,12 +13,15 @@ Start this Forma Studio demo with Piny.
 
 Work in this project's folder. Inspect package.json and vite.config.ts first.
 It is a standalone React + Vite + Tailwind v4 app, already configured with
-@pinegrow/piny@1.0.0-beta.1. Do not add another plugin or change the app source.
+Piny. Do not add another plugin or change the app source.
 
-Use Node ^20.19.0 || >=22.12.0 and npm. Run npm install, keeping the exact
-dependency versions in package.json. If a required version is unavailable,
-report the error instead of substituting a different version.
-Keep any generated package-lock.json for repeatable future installs.
+Use Node ^20.19.0 || >=22.12.0 and npm. Piny follows npm's latest tag; keep
+"@pinegrow/piny": "latest" in package.json. Run npm install, then
+npm update @pinegrow/piny so an existing lockfile also receives the current
+Piny release. Keep all other dependency versions unchanged. If a required
+version is unavailable, report the error instead of substituting a different one.
+Keep the generated package-lock.json for repeatable installs; a plain npm install
+can reuse its locked version.
 Read node_modules/@pinegrow/piny/AGENT_SETUP.md for the installed instructions.
 
 Run npm run dev. Reuse an existing server for this project if one is running;
@@ -41,7 +44,8 @@ Piny reports when later source, descriptions or preview inputs need review.
 If I later change component examples, run npm run previews to refresh them.
 Do not commit .piny/local.json, .piny/cache, node_modules or dist.
 
-Report the editor URL and any setup problem, without exposing secrets.
+Report the installed Piny version, editor URL and any setup problem, without
+exposing secrets.
 ```
 
 ## Try your first edits
