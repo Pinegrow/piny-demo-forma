@@ -1,0 +1,9 @@
+The MIT license covers this demo's source, documentation and included images
+to the extent Pinegrow holds rights in them. Image provenance is in
+public/images/assets.json.
+
+The shadcn/ui Button and Card sources retain the MIT notice in SHADCN-LICENSE.
+Their source URLs and hashes are recorded in registry-sources.json.
+
+The separately installed @pinegrow/piny package is not included in this grant.
+Piny and other npm dependencies retain their own licenses.

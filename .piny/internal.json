@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "components": {
+    "app-shell": {"source": {"module": "src/App.tsx", "export": "App"}, "label": "Workspace shell", "visibility": "hidden"},
+    "workspace-icon": {"source": {"module": "src/Icon.tsx", "export": "Icon"}, "label": "Workspace icon", "visibility": "hidden"},
+    "overview-root": {"source": {"module": "src/pages/OverviewPage.tsx", "export": "OverviewPage"}, "label": "Overview page root", "visibility": "hidden"},
+    "projects-root": {"source": {"module": "src/pages/ProjectsPage.tsx", "export": "ProjectsPage"}, "label": "Projects page root", "visibility": "hidden"},
+    "project-root": {"source": {"module": "src/pages/ProjectPage.tsx", "export": "ProjectPage"}, "label": "Project detail root", "visibility": "hidden"},
+    "guide-root": {"source": {"module": "src/pages/GuidePage.tsx", "export": "GuidePage"}, "label": "Component guide root", "visibility": "hidden"},
+    "card-header": {"source": {"module": "src/components/ui/card.tsx", "export": "CardHeader"}, "label": "Card header implementation", "visibility": "hidden"},
+    "card-footer": {"source": {"module": "src/components/ui/card.tsx", "export": "CardFooter"}, "label": "Card footer implementation", "visibility": "hidden"},
+    "card-title": {"source": {"module": "src/components/ui/card.tsx", "export": "CardTitle"}, "label": "Card title implementation", "visibility": "hidden"},
+    "card-action": {"source": {"module": "src/components/ui/card.tsx", "export": "CardAction"}, "label": "Card action implementation", "visibility": "hidden"},
+    "card-description": {"source": {"module": "src/components/ui/card.tsx", "export": "CardDescription"}, "label": "Card description implementation", "visibility": "hidden"},
+    "card-content": {"source": {"module": "src/components/ui/card.tsx", "export": "CardContent"}, "label": "Card content implementation", "visibility": "hidden"}
+  }
+}

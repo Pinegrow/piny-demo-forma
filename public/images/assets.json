@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "generatedAt": "2026-10-14",
+  "generator": "OpenAI built-in image_gen",
+  "provenance": "Original AI-generated imagery created for the Forma studio demo. These illustrate fictional architecture and furniture projects.",
+  "postprocessing": "Format conversion from tool PNG outputs to JPEG quality 90 via macOS sips; no content edits.",
+  "assets": [
+    {
+      "file": "casa-luma.jpg",
+      "width": 1536,
+      "height": 1024,
+      "prompt": "Use case: photorealistic-natural\nAsset type: wide editorial architecture photograph for a contemporary design studio portfolio website\nPrimary request: Casa Luma, a warm minimalist Mediterranean living room with a sculptural curved ivory sofa, low travertine coffee table and large sunny arched opening.\nScene/backdrop: beautifully detailed pale warm lime-plaster walls, honed travertine floor, Mediterranean courtyard glimpse through the arch, no clutter.\nStyle/medium: exceptionally convincing high-end architectural photography, natural fine grain, carefully observed material texture, sophisticated magazine art direction.\nComposition/framing: landscape 3:2, wide room view at human eye level, architectural verticals straight, balanced sculptural furniture and arch composition, generous spatial depth.\nLighting/mood: clear late-afternoon Mediterranean daylight, warm sun rays and architectural shadow, serene and tactile.\nColor palette: warm ivory, sand, honey and muted olive foliage.\nConstraints: No people, no writing, no logo, no watermark, no collage. A complete full-frame photograph.",
+      "sourceFilename": "exec-c05fc398-a678-48af-b7c1-af2e3fa5aad9.png",
+      "alt": "Sunlit Mediterranean living room with curved ivory seating, a travertine coffee table, and an arched courtyard opening."
+    },
+    {
+      "file": "form-objects.jpg",
+      "width": 1536,
+      "height": 1024,
+      "prompt": "Use case: product-mockup\nAsset type: wide editorial furniture photograph for a contemporary design studio portfolio website\nPrimary request: Form Objects, a cobalt blue sculptural lounge chair and polished chrome side table in a pale brutalist studio.\nScene/backdrop: minimal pale concrete room with subtle construction texture, a strong square architectural opening and elevated concrete plinth.\nSubject: original contemporary chair design with a flowing sculptural cobalt blue seat, expressive curved silhouette, beside one small reflective chrome cylinder side table.\nStyle/medium: exceptionally convincing high-end furniture editorial photography, sophisticated restrained art direction, tactile real materials.\nComposition/framing: landscape 3:2, wide composed view, chair shown at three-quarter angle with plenty of breathing room, complete furniture objects, natural believable scale.\nLighting/mood: crisp natural light enters from above left and casts soft geometric shadows, cool serene gallery mood.\nColor palette: saturated cobalt blue focal point, pale warm grey concrete, silver chrome.\nConstraints: No people, no writing, no logo, no watermark, no collage. A complete full-frame photograph.",
+      "sourceFilename": "exec-926a5b86-88ad-4d8d-8873-6d32d4402477.png",
+      "alt": "Sculptural cobalt blue lounge chair and reflective chrome side table in a pale concrete studio."
+    },
+    {
+      "file": "atelier-no-4.jpg",
+      "width": 1536,
+      "height": 1024,
+      "prompt": "Use case: photorealistic-natural\nAsset type: wide editorial architecture photograph for a contemporary design studio portfolio website\nPrimary request: Atelier No. 4, an intimate warm design studio with dark walnut joinery and a handcrafted architectural scale model.\nScene/backdrop: beautifully detailed dark walnut wall cabinetry and display shelves, one quiet window, polished concrete and walnut worktable. Restrained active workspace.\nSubject: elegant pale architectural scale model of a modern courtyard building placed on the foreground walnut worktable; rolled plans and small material samples subtly placed nearby.\nStyle/medium: exceptionally convincing high-end interiors editorial photography, natural fine grain, sophisticated magazine art direction, real observed material detail.\nComposition/framing: landscape 3:2, wide interior view at human eye level, architecture and craftsmanship balanced, straight architectural verticals and generous spatial depth.\nLighting/mood: warm afternoon window light on the architectural model contrasted with rich walnut shadows; quiet contemplative design practice.\nColor palette: dark walnut brown, warm cognac, cream model, muted concrete grey.\nConstraints: No people, no legible writing, no logo, no watermark, no collage. A complete full-frame photograph.",
+      "sourceFilename": "exec-fc2978ac-22e6-404a-915a-15e691fe72e0.png",
+      "alt": "Architectural model and material samples on a walnut worktable in a warm timber-lined design studio."
+    }
+  ]
+}

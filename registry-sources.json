@@ -1,0 +1,14 @@
+[
+  {
+    "component": "button",
+    "url": "https://ui.shadcn.com/r/styles/new-york-v4/button.json",
+    "sourceSha256": "79dd6f75f8136394442202d6b8b922fb269eaad0a5dba579397c9d5b41f893bb",
+    "modified": false
+  },
+  {
+    "component": "card",
+    "url": "https://ui.shadcn.com/r/styles/new-york-v4/card.json",
+    "sourceSha256": "ef8305b12c3112dab42a4708b41b1ebcc042fa5ab4c20f039da8d45b09ed5059",
+    "modified": false
+  }
+]

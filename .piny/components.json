@@ -1,0 +1,149 @@
+{
+  "version": 1,
+  "components": {
+    "studio-heading": {
+      "source": {"module": "src/components/demo.tsx", "export": "StudioHeading"},
+      "label": "Studio heading", "category": "FORMA / Page sections", "order": 0,
+      "description": "A page introduction with an editorial title, small overline and supporting copy. Center it for a presentation, or keep it left-aligned for workspace pages.",
+      "documentation": ".piny/COMPONENT_GUIDE.md", "keywords": ["title", "intro", "hero", "editorial", "heading"],
+      "props": {
+        "className": {"visibility": "hidden", "description": "Use Visual Properties or Class Inspector for source-owned usage styling."},
+        "eyebrow": {"label": "Overline", "description": "A short category or greeting above the title.", "group": "Content", "order": 0, "control": "text", "maxLength": 60},
+        "title": {"label": "Page title", "group": "Content", "order": 10, "control": "text", "minLength": 1, "maxLength": 90, "allowRemove": false},
+        "description": {"label": "Introduction", "group": "Content", "order": 20, "control": "textarea", "maxLength": 240},
+        "align": {"label": "Alignment", "group": "Appearance", "order": 30, "control": "select", "initialValue": "left", "options": [{"value": "left", "label": "Left — workspace"}, {"value": "center", "label": "Center — presentation"}]}
+      },
+      "insert": {"props": {"eyebrow": "THE STUDIO", "title": "Ideas, taking shape.", "description": "A new chapter for thoughtful spaces and objects."}},
+      "presets": {
+        "collection": {"label": "Collection introduction", "description": "A compact heading for a project collection.", "order": 10, "props": {"eyebrow": "SELECTED WORK", "title": "Made with intention.", "description": "Spaces and objects designed around the way we live."}, "preview": "collection"},
+        "centered": {"label": "Centered introduction", "order": 20, "props": {"eyebrow": "FORMA STUDIO", "title": "Room for possibility.", "description": "Architecture, interiors, and the details in between.", "align": "center"}, "preview": "centered"}
+      },
+      "examples": {
+        "default": {"label": "Workspace introduction", "html": ".piny/previews/studio-heading.html", "viewport": {"width": 720, "height": 250}, "order": 0},
+        "collection": {"label": "Collection introduction", "html": ".piny/previews/studio-heading-collection.html", "viewport": {"width": 720, "height": 250}, "order": 10},
+        "centered": {"label": "Centered introduction", "html": ".piny/previews/studio-heading-centered.html", "viewport": {"width": 720, "height": 270}, "order": 20}
+      },
+      "watch": {"description": [".piny/COMPONENT_GUIDE.md", "src/style.css"]}
+    },
+    "metric-card": {
+      "source": {"module": "src/components/demo.tsx", "export": "MetricCard"},
+      "label": "Studio metric", "category": "FORMA / Insights", "order": 0,
+      "description": "One readable studio number, with an optional comparison and directional cue. Values remain authored strings so currencies and units stay intentional.",
+      "documentation": ".piny/COMPONENT_GUIDE.md", "keywords": ["stat", "number", "dashboard", "kpi", "revenue"],
+      "props": {
+        "className": {"visibility": "hidden", "description": "Use Visual Properties or Class Inspector for source-owned usage styling."},
+        "label": {"label": "Metric name", "group": "Content", "order": 0, "minLength": 1, "maxLength": 40},
+        "value": {"label": "Display value", "description": "Include any currency or unit, for example €48.2k or 12.", "group": "Content", "order": 10, "minLength": 1, "maxLength": 24},
+        "showChange": {"label": "Show comparison", "group": "Comparison", "order": 20, "control": "checkbox", "initialValue": true},
+        "change": {"label": "Comparison text", "group": "Comparison", "order": 30, "maxLength": 60, "visibleWhen": {"prop": "showChange", "equals": true}},
+        "trend": {"label": "Direction", "group": "Comparison", "order": 40, "control": "select", "options": [{"value": "up", "label": "Increasing ↗"}, {"value": "down", "label": "Decreasing ↘"}, {"value": "neutral", "label": "Unchanged —"}], "visibleWhen": {"prop": "showChange", "equals": true}},
+        "accent": {"label": "Highlight this metric", "group": "Appearance", "order": 50, "control": "checkbox", "initialValue": false}
+      },
+      "insert": {"props": {"label": "Active projects", "value": "12", "change": "2 more than last month"}},
+      "presets": {
+        "revenue": {"label": "Revenue highlight", "order": 10, "props": {"label": "Project revenue", "value": "€48.2k", "change": "+18.4% this month", "trend": "up", "accent": true}, "preview": "revenue"},
+        "capacity": {"label": "Studio capacity", "order": 20, "props": {"label": "Studio capacity", "value": "82%", "change": "A little room for something new", "trend": "neutral"}, "preview": "capacity"},
+        "quiet": {"label": "Number only", "order": 30, "props": {"label": "Years of practice", "value": "08", "change": "", "showChange": false}, "preview": "quiet"}
+      },
+      "examples": {
+        "default": {"label": "Active projects", "html": ".piny/previews/metric-card.html", "viewport": {"width": 300, "height": 240}, "order": 0},
+        "revenue": {"label": "Revenue highlight", "html": ".piny/previews/metric-card-revenue.html", "viewport": {"width": 300, "height": 240}, "order": 10},
+        "capacity": {"label": "Studio capacity", "html": ".piny/previews/metric-card-capacity.html", "viewport": {"width": 300, "height": 240}, "order": 20},
+        "quiet": {"label": "Number only", "html": ".piny/previews/metric-card-quiet.html", "viewport": {"width": 300, "height": 210}, "order": 30}
+      },
+      "watch": {"contract": ["src/components/ui/card.tsx"], "description": [".piny/COMPONENT_GUIDE.md", "src/style.css"]}
+    },
+    "project-card": {
+      "source": {"module": "src/components/demo.tsx", "export": "ProjectCard"},
+      "label": "Project card", "category": "FORMA / Projects", "order": 0,
+      "description": "An image-led commission card with status, progress, and a source-owned project link. The image and its accessible description are independent editable props.",
+      "documentation": ".piny/COMPONENT_GUIDE.md", "thumbnail": "public/images/casa-luma.jpg", "keywords": ["portfolio", "project", "image", "card", "commission"],
+      "props": {
+        "className": {"visibility": "hidden", "description": "Use Visual Properties or Class Inspector for source-owned usage styling."},
+        "title": {"label": "Project name", "group": "Project", "order": 0, "minLength": 1, "maxLength": 60},
+        "category": {"label": "Discipline", "group": "Project", "order": 10, "maxLength": 80},
+        "image": {"label": "Cover photograph", "description": "Choose a landscape image from the project's public assets.", "group": "Image", "order": 20, "control": "image"},
+        "imageAlt": {"label": "Image description", "description": "Describe the photograph for people who cannot see it.", "group": "Image", "order": 30, "control": "textarea", "minLength": 1, "maxLength": 200},
+        "href": {"label": "Open project", "description": "Choose a named route or enter another app-relative project URL.", "group": "Project", "order": 40, "control": "route", "routeFormat": "app-relative"},
+        "status": {"label": "Project stage", "group": "Progress", "order": 50, "control": "select", "initialValue": "In progress", "options": [{"value": "In progress", "label": "In progress"}, {"value": "In review", "label": "Ready for review"}, {"value": "Completed", "label": "Completed"}]},
+        "progress": {"label": "Completion", "group": "Progress", "order": 60, "control": "range", "min": 0, "max": 100, "step": 1, "unit": "%"},
+        "featured": {"label": "Feature this project", "group": "Appearance", "order": 70, "control": "checkbox", "initialValue": false}
+      },
+      "insert": {"props": {"title": "Casa Luma", "category": "Residential · Interior design", "image": "/images/casa-luma.jpg", "imageAlt": "Sunlight across a sculptural sofa and warm travertine in a Mediterranean home", "href": "/projects/casa-luma", "status": "In progress", "progress": 68}},
+      "presets": {
+        "objects": {"label": "Objects commission", "order": 10, "props": {"title": "Form / Objects", "category": "Collection · Product design", "image": "/images/form-objects.jpg", "imageAlt": "A cobalt blue sculptural chair beside a polished chrome side table", "href": "/projects/form-objects", "status": "In review", "progress": 90}, "preview": "objects"},
+        "completed": {"label": "Completed workspace", "order": 20, "props": {"title": "Atelier No. 4", "category": "Workspace · Architecture", "image": "/images/atelier-no-4.jpg", "imageAlt": "A warm walnut design studio with an architectural model and afternoon light", "href": "/projects/atelier-no-4", "status": "Completed", "progress": 100, "featured": true}, "preview": "completed"}
+      },
+      "examples": {
+        "default": {"label": "Interior / in progress", "html": ".piny/previews/project-card.html", "environment": "project-card", "order": 0},
+        "objects": {"label": "Objects / in review", "html": ".piny/previews/project-card-objects.html", "environment": "project-card", "order": 10},
+        "completed": {"label": "Workspace / complete", "html": ".piny/previews/project-card-completed.html", "environment": "project-card", "order": 20}
+      },
+      "watch": {"contract": ["src/components/ui/card.tsx"], "description": [".piny/COMPONENT_GUIDE.md", "src/style.css"]}
+    },
+    "studio-notice": {
+      "source": {"module": "src/components/demo.tsx", "export": "StudioNotice"},
+      "label": "Studio announcement", "category": "FORMA / Page sections", "order": 10,
+      "description": "A considered announcement for a deadline, studio update, or useful next step. Switch its tone, edit the accent color, or hide the link without losing its authored values.",
+      "documentation": ".piny/COMPONENT_GUIDE.md", "keywords": ["notice", "banner", "announcement", "callout", "update"],
+      "props": {
+        "className": {"visibility": "hidden", "description": "Use Visual Properties or Class Inspector for source-owned usage styling."},
+        "title": {"label": "Announcement title", "group": "Content", "order": 0, "minLength": 1, "maxLength": 80},
+        "description": {"label": "Supporting copy", "group": "Content", "order": 10, "control": "textarea", "maxLength": 260},
+        "tone": {"label": "Surface", "group": "Appearance", "order": 20, "control": "select", "options": [{"value": "warm", "label": "Warm — welcoming"}, {"value": "neutral", "label": "Neutral — understated"}, {"value": "dark", "label": "Ink — high contrast"}]},
+        "accentColor": {"label": "Accent color", "group": "Appearance", "order": 30, "control": "color", "initialValue": "#e76f43"},
+        "showLink": {"label": "Show action", "group": "Action", "order": 40, "control": "checkbox", "initialValue": true},
+        "linkLabel": {"label": "Action label", "group": "Action", "order": 50, "minLength": 1, "maxLength": 40, "visibleWhen": {"prop": "showLink", "equals": true}},
+        "href": {"label": "Destination", "group": "Action", "order": 60, "control": "route", "routeFormat": "app-relative", "visibleWhen": {"prop": "showLink", "equals": true}}
+      },
+      "insert": {"props": {"title": "Good things take shape together.", "description": "Keep the team close to the work. Review the latest project milestones and make room for the next idea.", "href": "/projects", "linkLabel": "Explore projects", "tone": "warm"}},
+      "presets": {
+        "review": {"label": "Client review", "order": 10, "props": {"title": "Ready for a fresh perspective.", "description": "Form / Objects is ready for client review. The latest presentation and samples are waiting.", "href": "/projects/form-objects", "linkLabel": "View project", "tone": "dark", "accentColor": "#e76f43"}, "preview": "review"},
+        "quiet": {"label": "Simple studio note", "order": 20, "props": {"title": "A little space to think.", "description": "Wednesday afternoons are reserved for studio research and new ideas.", "href": "/projects", "linkLabel": "Explore projects", "tone": "neutral", "showLink": false, "accentColor": "#b5aa96"}, "preview": "quiet"}
+      },
+      "examples": {
+        "default": {"label": "Warm announcement", "html": ".piny/previews/studio-notice.html", "viewport": {"width": 740, "height": 290}, "order": 0},
+        "review": {"label": "Client review / ink", "html": ".piny/previews/studio-notice-review.html", "viewport": {"width": 740, "height": 290}, "order": 10},
+        "quiet": {"label": "Quiet studio note", "html": ".piny/previews/studio-notice-quiet.html", "viewport": {"width": 740, "height": 250}, "order": 20}
+      },
+      "watch": {"contract": ["src/components/ui/button.tsx"], "description": [".piny/COMPONENT_GUIDE.md", "src/style.css"]}
+    },
+    "studio-link": {
+      "source": {"module": "src/components/demo.tsx", "export": "StudioLink"},
+      "label": "Studio action", "category": "FORMA / Actions", "order": 0,
+      "description": "A rounded shadcn/ui Button rendered as a real link through Radix Slot. Disabled actions render as disabled buttons, so they cannot navigate.",
+      "documentation": ".piny/COMPONENT_GUIDE.md", "keywords": ["button", "link", "cta", "action", "navigation"],
+      "props": {
+        "className": {"visibility": "hidden", "description": "Use Visual Properties or Class Inspector for source-owned usage styling."},
+        "label": {"label": "Action label", "group": "Content", "order": 0, "minLength": 1, "maxLength": 40},
+        "href": {"label": "Link URL", "description": "Use an app-relative path or an HTTPS destination.", "group": "Content", "order": 10, "control": "url"},
+        "variant": {"label": "Appearance", "group": "Appearance", "order": 20, "control": "select", "initialValue": "default", "options": [{"value": "default", "label": "Primary — warm orange"}, {"value": "outline", "label": "Secondary — outline"}, {"value": "secondary", "label": "Quiet — soft fill"}]},
+        "size": {"label": "Size", "group": "Appearance", "order": 30, "control": "select", "options": [{"value": "sm", "label": "Compact"}, {"value": "default", "label": "Standard"}, {"value": "lg", "label": "Generous"}]},
+        "disabled": {"label": "Unavailable", "description": "Temporarily prevent activation while retaining the destination in source.", "group": "Behavior", "order": 40, "control": "checkbox", "visibility": "advanced", "initialValue": false}
+      },
+      "insert": {"props": {"label": "Explore projects", "href": "/projects"}},
+      "presets": {
+        "outline": {"label": "Secondary action", "order": 10, "props": {"label": "View studio guide", "href": "/guide", "variant": "outline"}, "preview": "outline"},
+        "compact": {"label": "Compact action", "order": 20, "props": {"label": "View project", "href": "/projects/casa-luma", "variant": "secondary", "size": "sm"}, "preview": "compact"}
+      },
+      "examples": {
+        "default": {"label": "Primary action", "html": ".piny/previews/studio-link.html", "viewport": {"width": 320, "height": 140}, "order": 0},
+        "outline": {"label": "Secondary action", "html": ".piny/previews/studio-link-outline.html", "viewport": {"width": 320, "height": 140}, "order": 10},
+        "compact": {"label": "Compact action", "html": ".piny/previews/studio-link-compact.html", "viewport": {"width": 280, "height": 130}, "order": 20}
+      },
+      "watch": {"contract": ["src/components/ui/button.tsx"], "description": [".piny/COMPONENT_GUIDE.md", "src/style.css"]}
+    },
+    "shadcn-button": {
+      "source": {"module": "src/components/ui/button.tsx", "export": "Button"},
+      "label": "Button primitive", "category": "shadcn/ui / Primitives", "visibility": "advanced", "order": 0,
+      "description": "Unchanged upstream Button with cva variants and Radix Slot. Use Studio action for the curated scalar insertion controls; existing primitive usages retain source-supported class editing.",
+      "documentation": "https://ui.shadcn.com/docs/components/button", "keywords": ["shadcn", "button", "primitive"]
+    },
+    "shadcn-card": {
+      "source": {"module": "src/components/ui/card.tsx", "export": "Card"},
+      "label": "Card primitive", "category": "shadcn/ui / Primitives", "visibility": "advanced", "order": 10,
+      "description": "Unchanged upstream Card. Curated Project card and Studio metric wrappers provide useful insertable compositions.",
+      "documentation": "https://ui.shadcn.com/docs/components/card", "keywords": ["shadcn", "card", "primitive"]
+    }
+  }
+}

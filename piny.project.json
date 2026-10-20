@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "includes": [".piny/components.json", ".piny/internal.json"],
+  "project": {
+    "name": "FORMA — Studio workspace",
+    "description": "A considered workspace for an independent architecture and design studio. Real shadcn/ui components, source-owned React and a curated Piny library.",
+    "defaultPreviewEnvironment": "studio",
+    "startPage": "overview"
+  },
+  "previewEnvironments": {
+    "studio": {
+      "label": "FORMA studio",
+      "html": ".piny/previews/context.html",
+      "viewport": {"width": 680, "height": 420},
+      "watch": ["src/style.css"]
+    },
+    "project-card": {
+      "label": "Project collection",
+      "html": ".piny/previews/card-context.html",
+      "viewport": {"width": 380, "height": 440},
+      "watch": ["src/style.css", "public/images/casa-luma.jpg", "public/images/form-objects.jpg", "public/images/atelier-no-4.jpg"]
+    }
+  },
+  "pages": {
+    "overview": {"label": "Studio overview", "description": "The studio at a glance: activity, projects and priorities.", "order": 0, "group": "Workspace", "path": "/", "root": {"module": "src/pages/OverviewPage.tsx", "export": "OverviewPage"}},
+    "projects": {"label": "All projects", "description": "Browse the studio's current commissions.", "order": 10, "group": "Workspace", "path": "/projects", "root": {"module": "src/pages/ProjectsPage.tsx", "export": "ProjectsPage"}},
+    "project": {
+      "label": "Project detail", "order": 20, "group": "Projects", "path": "/projects/:slug",
+      "root": {"module": "src/pages/ProjectPage.tsx", "export": "ProjectPage"},
+      "examples": {
+        "casa-luma": {"label": "Casa Luma", "params": {"slug": "casa-luma"}},
+        "form-objects": {"label": "Form / Objects", "params": {"slug": "form-objects"}},
+        "atelier-no-4": {"label": "Atelier No. 4", "params": {"slug": "atelier-no-4"}}
+      }
+    },
+    "guide": {"label": "Component guide", "description": "An editable guide to the studio's components and metadata.", "order": 30, "group": "Resources", "path": "/guide", "root": {"module": "src/pages/GuidePage.tsx", "export": "GuidePage"}}
+  }
+}

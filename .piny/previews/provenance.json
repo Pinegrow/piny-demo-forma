@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "recipe": "node --import tsx scripts/update-previews.ts",
+  "purpose": "Reproducible static Library illustrations; these hashes are not a metadata review or runtime verification.",
+  "inputSha256": {
+    "src/components/demo.tsx": "7cd75803993f81d0421c1ca7d88f82c0e3a532703b4af435751dafb69cf58102",
+    "src/components/ui/button.tsx": "79dd6f75f8136394442202d6b8b922fb269eaad0a5dba579397c9d5b41f893bb",
+    "src/components/ui/card.tsx": "ef8305b12c3112dab42a4708b41b1ebcc042fa5ab4c20f039da8d45b09ed5059",
+    "src/style.css": "6f6031bc99503677a8fb8f43004b94e0379bb24787fbfce706d4f9e415c069c3",
+    "piny.project.json": "98b185ed1cc633fa9b6e8dd21d9e5eeb787cb3de5ad932d705d4d731556c5804",
+    ".piny/components.json": "b5cd6ef329cc2363e46945ec723e00427f9830d9c1c85a167087534210f3e21f",
+    "scripts/update-previews.ts": "f2c383477a39345615a1719f51d9384ad86ff62a85e9c76c742cdf57161568db",
+    "registry-sources.json": "5567c74d8112da86435b179e3b694f702dcb2d21796a75cc9fbc0b52f1acb580",
+    "public/images/casa-luma.jpg": "319563915d087ae12d39843bd2a053906c0287e285f3551327ae9130c4c8ab86",
+    "public/images/form-objects.jpg": "1327afe379c7dfb45096cb399fef71a3f0d74b24a5573529756432ebed905066",
+    "public/images/atelier-no-4.jpg": "00f7c004ea685da1bb82af011778c31968f9885fc5f5adbd677bb6a422ccf640"
+  },
+  "outputSha256": {
+    ".piny/previews/context.html": "848a40c3548e83a9429800edb2da3f85b655a36cf1b8db21999d54f01a4af2c2",
+    ".piny/previews/card-context.html": "d00680f15e4e68d31d383db53865bfe2e5fa4dc724bd5844eda7de248ce2a758",
+    ".piny/previews/studio-heading.html": "a224053079f8baaffa92953566f7f287c27b86d9a968c4a3f58fea46c6836e76",
+    ".piny/previews/studio-heading-collection.html": "2d37999cce22a822d2ff5432a8f4b80b17290bbb251227e0df3f140a01fe5094",
+    ".piny/previews/studio-heading-centered.html": "1539de4d22f6df949e31135063883d21e96d4cf009ff9356f8c6e957e7432cd7",
+    ".piny/previews/metric-card.html": "c13b2eb92d34dc0553002bc0ef4b99894be2d2f90269eaf8bc7a421e6f24d6d4",
+    ".piny/previews/metric-card-revenue.html": "4885efa32e505c39e808ecaa57dc417f998f2684024ed54334f16dfbe24d14d1",
+    ".piny/previews/metric-card-capacity.html": "73d49c509089e71af394df9f343e55d9053e8c545e95f87d68e081293b291943",
+    ".piny/previews/metric-card-quiet.html": "29f6d79515219e4b9a0ae7920948b7476ef3a25e9ffcc2f5cd9f411b46a22225",
+    ".piny/previews/project-card.html": "9bd8f0c04756b0e793b233e4e6cdcf1027cf8ffceb289fc2e1bef56603e7f853",
+    ".piny/previews/project-card-objects.html": "b012bacff700a4ac4543bed82247160998cd0e53c0e5cf07f3723f2df196aa6c",
+    ".piny/previews/project-card-completed.html": "075572491357ddaac833b4d9743277695cebee7fe6ec9a755f0c38333e91e47c",
+    ".piny/previews/studio-notice.html": "a270f7b8d2a568b76a89c35422ad9d6b222458975ef317d502edd2093d2c6ad1",
+    ".piny/previews/studio-notice-review.html": "af4a6e1ae35221f5ebea141c039b3f76dc5d1884802acf49d2cbfdfb56ee36d4",
+    ".piny/previews/studio-notice-quiet.html": "07ea869fb92612dfc0bd33eff61af811ec3389045fcfcb02bd698cd67344ace2",
+    ".piny/previews/studio-link.html": "c2a30b329f347e82f81e265737d6b06d98a9a08adaddffa831ac0fc72a8ceb79",
+    ".piny/previews/studio-link-outline.html": "91121a0b4e6210dad83ef78dadca8ec50436de1913602b8dfd82cec707bbb10d",
+    ".piny/previews/studio-link-compact.html": "9a4230306cc7591bbace5c84f14f4792a694f7fcf623b5d3390203011dc526c0"
+  }
+}

@@ -1,0 +1,16 @@
+import {useState} from 'react';
+import {Tabs} from 'radix-ui';
+import {Button} from '../components/ui/button';
+import {ProjectCard, StudioHeading} from '../components/demo';
+import {Icon} from '../Icon';
+import {useWorkspace} from '../workspace';
+
+export function ProjectsPage() {
+  const {projects, openCreate} = useWorkspace();
+  const [filter, setFilter] = useState('All projects');
+  const [search, setSearch] = useState(new URLSearchParams(location.search).get('q') || '');
+  const [sort, setSort] = useState('featured');
+  const filtered = projects.filter(project => (filter === 'All projects' || project.status === filter) && (project.title + ' ' + project.category + ' ' + project.client).toLowerCase().includes(search.toLowerCase()));
+  const visible = sort === 'name' ? [...filtered].sort((a, b) => a.title.localeCompare(b.title)) : sort === 'progress' ? [...filtered].sort((a, b) => b.progress - a.progress) : filtered;
+  return <><div className="page-heading-row"><StudioHeading eyebrow="A COLLECTION OF POSSIBILITIES" title="Good work, in good company." description="From the first sketch to the finishing touch. Find every project here."/><Button onClick={openCreate}><Icon name="plus" size={16}/>New project</Button></div><Tabs.Root value={filter} onValueChange={setFilter} className="project-browser"><div className="project-filters"><Tabs.List aria-label="Filter projects" className="filter-tabs">{['All projects', 'In progress', 'In review', 'Completed'].map(value => <Tabs.Trigger key={value} value={value}>{value}<span>{projects.filter(project => value === 'All projects' || project.status === value).length}</span></Tabs.Trigger>)}</Tabs.List><div className="project-search-row"><label className="project-search"><Icon name="search" size={17}/><input aria-label="Filter projects by name" value={search} onChange={event => setSearch(event.target.value)} placeholder="Find a project…"/></label><select aria-label="Sort projects" value={sort} onChange={event => setSort(event.target.value)}><option value="featured">Studio order</option><option value="name">Name A–Z</option><option value="progress">Most complete</option></select></div></div>{['All projects', 'In progress', 'In review', 'Completed'].map(value => <Tabs.Content value={value} key={value}><p className="results-label">{visible.length} {visible.length === 1 ? 'project' : 'projects'}<span>Thoughtfully made. Always evolving.</span></p>{visible.length ? <div className="project-grid all-projects">{visible.map(project => <ProjectCard key={project.id} title={project.title} category={project.category} image={project.image} imageAlt={project.imageAlt} href={project.href} status={project.status} progress={project.progress}/>)}</div> : <div className="empty-state"><Icon name="search" size={32}/><h2>A little too specific?</h2><p>No projects match this view. Try another name or status.</p><Button variant="outline" onClick={() => {setSearch(''); setFilter('All projects');}}>Show all projects</Button></div>}</Tabs.Content>)}</Tabs.Root><div className="project-endnote"><span>✳</span><p>Every great project starts with a conversation.</p><Button variant="outline" onClick={openCreate}>Start something new <Icon name="plus" size={16}/></Button></div></>;
+}
